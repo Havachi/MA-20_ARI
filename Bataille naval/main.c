@@ -3,7 +3,26 @@
 #include <windows.h>
 #include <time.h>
 
+//Constante
 #define NUMERO_VERSION 0.1
+#define HORIZONTAL_MAX 10
+#define VERTICAL_MAX 10
+//Variable Globale
+int bateaurestants;
+int GrilleDeJeu[HORIZONTAL_MAX][VERTICAL_MAX] =
+{{0,1,1,1,1,0,0,0,0,0},
+ {0,0,1,0,0,0,0,0,0,0},
+ {0,0,0,1,1,1,0,0,0,0},
+ {0,0,0,0,0,0,0,0,0,0},
+ {0,0,0,0,0,0,0,0,0,0},
+ {0,0,0,1,0,0,0,0,0,0},
+ {0,0,0,1,0,0,1,0,0,0},
+ {0,0,0,0,0,0,0,0,0,0},
+ {0,0,0,0,0,0,0,0,0,0},
+ {0,0,0,0,0,0,0,0,0,0}};
+
+
+
 int AfficherMenu()
 {//MENU PRINCIPAL
      int rmenu;
@@ -45,6 +64,30 @@ int AfficherMenu()
     }
 int main()
 {
-    AfficherMenu();
-    return 0;
+    while(1){
+       int rmenu;
+       rmenu = AfficherMenu();
+       switch(rmenu){
+            case 1:{
+                do{
+                    afficheGrille();
+                }while(bateaurestants>0);
+
+            }
+       }
+    }
+}
+int afficheGrille(){
+bateaurestants = 10;
+printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c \n",201,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,187);
+Sleep(500);
+printf("%c %d %d %d %d %d %d %d %d %d %d %c \n",186,GrilleDeJeu[0][0],GrilleDeJeu[0][1],GrilleDeJeu[0][2],GrilleDeJeu[0][3],GrilleDeJeu[0][4],GrilleDeJeu[0][5],GrilleDeJeu[0][6],GrilleDeJeu[0][7],GrilleDeJeu[0][8],GrilleDeJeu[0][9],186);
+Sleep(500);
+printf("%c %d %d %d %d %d %d %d %d %d %d %c \n",186,GrilleDeJeu[1][1],GrilleDeJeu[1][1],GrilleDeJeu[1][2],GrilleDeJeu[1][3],GrilleDeJeu[1][4],GrilleDeJeu[1][5],GrilleDeJeu[1][6],GrilleDeJeu[1][7],GrilleDeJeu[1][8],GrilleDeJeu[1][9],186);
+Sleep(500);
+printf("%c %d %d %d %d %d %d %d %d %d %d %c \n",186,GrilleDeJeu[2][1],GrilleDeJeu[2][1],GrilleDeJeu[2][2],GrilleDeJeu[2][3],GrilleDeJeu[2][4],GrilleDeJeu[2][5],GrilleDeJeu[2][6],GrilleDeJeu[2][7],GrilleDeJeu[2][8],GrilleDeJeu[2][9],186);
+Sleep(500);
+system("cls");
+
+
 }
