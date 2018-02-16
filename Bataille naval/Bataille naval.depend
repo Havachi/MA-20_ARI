@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1518766551 source:p:\cours\ma\1ere\ma-20 application c\bataille naval new\bataille naval\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
